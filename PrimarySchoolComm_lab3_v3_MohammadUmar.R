@@ -66,8 +66,6 @@ table(c.m, stud.class, useNA = c("no"))
 table(c.m, stud.gender, useNA = c("no"))
 
 # Here, we are testing community significance for just two of the communities. 
-#Students will complete tests for the remainder of communities for each algorithm. 
-
 v_comp1 <- V(g_primschool)[c.m==1]
 v_comp2 <- V(g_primschool)[c.m==2]
 v_comp3 <- V(g_primschool)[c.m==3]
@@ -84,7 +82,7 @@ community.significance.test(g_primschool, v_comp6)
 community.significance.test(g_primschool, v_comp7)
 
 set.seed(123)
-# Students will produce similar plots for the walktrap, spinglass, and label propagation algorithms for community detection
+# Similar plots for the walktrap, spinglass, and label propagation algorithms for community detection
 plot(school_comm_fast,g_primschool, vertex.label= NA, vertex.size=2)
 # In the igraph help, online documentation or KC book, students will find the function calls for the walktrap, spinglass, and label propagation algorithms 
 # Why are the benefits and drawbacks of the Girvan-Newman algorithm for community detection? Hint: try it in igraph
